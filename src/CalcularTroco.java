@@ -39,9 +39,17 @@ public class CalcularTroco
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        double valor = scanner.nextDouble();
+
+        System.out.println("Informe o total da conta: ");
+        double valorConta = scanner.nextDouble();
+        System.out.println("O valor total da conta " + valorConta);
+
+        System.out.println("Informe o valor total pago: ");
+        double valorPago = scanner.nextDouble();
+        System.out.println("O valor total pago " + valorPago);
+
         scanner.close();
-        System.out.println("O valor a ser calculado é " + valor);
+        System.out.println("O valor total pago " + valorPago);
     }
 
 }
