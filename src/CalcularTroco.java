@@ -13,21 +13,26 @@ import java.util.Scanner;
 
 public class CalcularTroco
 {
-    private static int nota100;
-    private static int nota50;
-    private static int nota10;
-    private static int nota5;
-    private static int nota1;
-    private static int moeda50;
-    private static int moeda10;
-    private static int moeda5;
-    private static int moeda1;
+    public static int nota100;
+    public static int nota50;
+    public static int nota10;
+    public static int nota5;
+    public static int nota1;
+    public static int moeda50;
+    public static int moeda10;
+    public static int moeda5;
+    public static int moeda1;
+
+    public CalcularTroco()
+    {
+
+    }
 
     /**
      * @param valorConta Valor total da conta
      * @param valorPago Valor pago pelo cliente
      */
-    public static String calcularTroco(double valorConta, double valorPago)
+    public String calcularTroco(double valorConta, double valorPago)
     {
         if (valorPago < valorConta)
         {
@@ -40,7 +45,6 @@ public class CalcularTroco
             int listaCentavos[] =
             { 50, 10, 5, 1 };
 
-            String resultado;
             double troco = valorPago - valorConta;
             int i = 0, valor, centavos, numeroNotas;
 
@@ -89,7 +93,7 @@ public class CalcularTroco
         return "";
     }
 
-    public static void exibirResultados()
+    public void exibirResultados()
     {
         if (nota100 > 0) System.out.println("Notas de 100: " + nota100);
         if (nota50 > 0) System.out.println("Notas de 50: " + nota50);
@@ -106,7 +110,7 @@ public class CalcularTroco
     /**
      * @param args
      */
-    public static void main(String[] args)
+    public void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
 
